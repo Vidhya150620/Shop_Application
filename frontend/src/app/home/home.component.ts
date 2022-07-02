@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
     private userService:UserService) { }
 
   ngOnInit(): void {
-    if(localStorage.getItem("token")!=null){
+    if(localStorage.getItem("token") != null){
        this.userService.checkToken().subscribe((response:any)=>{
          this.router.navigate(['/cafe/dashboard']);
 
@@ -50,3 +50,7 @@ export class HomeComponent implements OnInit {
   }
 
 }
+function token(token: any) {
+  throw new Error('Function not implemented.');
+}
+

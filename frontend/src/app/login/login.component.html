@@ -20,10 +20,10 @@
 
         <mat-form-field appearance="fill" fxFlex>
             <mat-label>Password</mat-label>
-            <input matInput formControlName="password" type="password" required>
+            <input matInput formControlName="password" type="password"required>
             <mat-error *ngIf="loginForm.controls.password.touched && loginForm.controls.password.invalid">
-                <span *ngIf="loginForm.controls.password.errors.required">This field is required</span>
-                <!-- <span *ngIf="loginForm.controls.password.errors.pattern">This is invalid</span> -->
+                <span *ngIf="loginForm.controls.password.errors.required">This is required</span>
+                <!-- <span *ngIf="loginForm.controls.password.errors.pattern">please enter a valid pattern</span> -->
             </mat-error>
         </mat-form-field>
     </div>

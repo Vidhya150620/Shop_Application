@@ -2,7 +2,7 @@ export class GlobalConstant{
     //message
     public static genericError:string = "Something went wrong. Please try again";
     
-    public static unauthroized: string ="you are not authrized person to access this page."
+    // public static unauthroized: string ="you are not authrized person to access this page."
 
     public static unauthorized: string = "you are not authorized person "
     //regex

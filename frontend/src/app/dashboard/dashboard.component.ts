@@ -12,6 +12,7 @@ export class DashboardComponent implements AfterViewInit {
 
     responseMessage:any;
 	data:any;
+	
 	ngAfterViewInit() { }
 
 	constructor(private dashboardService:DashboardService,
@@ -22,7 +23,7 @@ export class DashboardComponent implements AfterViewInit {
 	dashboardData(){
        this.dashboardService.getDetails().subscribe((response:any)=>{
 		this.data = response;
-
+		
 	   },(error:any)=>{
 		console.log(error)
 		if(error.error?.message){

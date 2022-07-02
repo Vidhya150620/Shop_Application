@@ -31,7 +31,7 @@ export class UserService {
   }
 
   checkToken(){
-    return this.HttpClient.get(this.url+ "/user/checkToken")
+    return this.HttpClient.get(this.url+ "/user/checkToken");
   }
 
   changePassword(data:any){
@@ -39,5 +39,7 @@ export class UserService {
       headers: new HttpHeaders().set('Content-Type','application/json')
     })  
   }
+
+  
   }
 

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -13,5 +14,7 @@ export class AppHeaderComponent {
     private dialog: MatDialog) {
 
   }
+
+ 
 
 }

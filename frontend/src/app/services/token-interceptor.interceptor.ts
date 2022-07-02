@@ -19,16 +19,15 @@ export class TokenInterceptorInterceptor implements HttpInterceptor {
     const token = localStorage.getItem('token');
     if(token){
       request = request.clone({
-        setHeaders:{Authorization: 'Bearer ${token}'}
-      })
+        setHeaders:{Authorization: "Bearer $(token)"}
+      });
     }
     return next.handle(request).pipe(
       catchError((err)=>{
         if(err instanceof HttpErrorResponse){
           console.log(err.url);
-          if(err.status === 401 || err.status ===403){
+          if(err.status === 401 || err.status === 403){
             if(this.router.url === '/'){
-        
             }
             else{
               localStorage.clear();
